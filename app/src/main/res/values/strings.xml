@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">MobileAssignment</string>
+
+    <!-- used as tags for shared element transitions -->
+    <string name="transition_drawable">drawable</string>
+    <string name="transition_message">message</string>
+    <string name="transition_time_and_date">date</string>
+    <string name="title_toolbar">List Activity</string>
+    <string name="tap_to_reload">Tap to reload</string>
+
+    <string name="HEROKU_API_HOST">http://sd2-hiring.herokuapp.com/api/</string>
+
+    <!-- errors -->
+    <string name="error_empty_dataset">No Repos listed for:</string>
+    <string name="error_not_found">Resource not found.</string>
+
+    <string name="error_msg">Sorry! Couldn\'t fetch movies.</string>
+    <string name="error_msg_no_internet">Not connected to internet</string>
+    <string name="error_msg_timeout">The server took too long to respond</string>
+    <string name="error_msg_unknown">An unexpected error occurred</string>
+</resources>
