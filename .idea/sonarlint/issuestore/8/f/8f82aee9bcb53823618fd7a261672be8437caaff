@@ -1,29 +1,0 @@
-
-U"squid:SwitchLastCaseIsDefaultCheck""Add a default case to this switch.(ºÖ8¦‰¦ÊÚ,
-gsquid:S1301"KReplace this "switch" statement by "if" statements to increase readability.(ºÖ8¦‰¦ÊÚ,
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ëŠ«ÿÿÿÿÿ8¦‰¦ÊÚ,
-nsquid:S1192"MDefine a constant instead of duplicating this literal "Item Image: " 3 times.(öÈÂ¿øÿÿÿÿ8¦‰¦ÊÚ,
-ƒsquid:S1450"bRemove the "linearLayoutManager" field and declare it as a local variable in the relevant methods.(ˆ§İ¨şÿÿÿÿ8¦‰¦ÊÚ,
-jsquid:MaximumInheritanceDepth"<This class has 7 parents which is greater than 5 authorized.(â–§Ô8¦‰¦ÊÚ,
-gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Ò¶×Â8¦‰¦ÊÚ,
-gsquid:S1301"KReplace this "switch" statement by "if" statements to increase readability.(çãÑÓ8¦‰¦ÊÚ,
-Isquid:S1068"(Remove this unused "user" private field.(‡ÏÇ³øÿÿÿÿ8¦‰¦ÊÚ,
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ùúÍ¤şÿÿÿÿ8¦‰¦ÊÚ,
-Msquid:S1153"1Directly append the argument of String.valueOf().(Ô¦û÷8¦‰¦ÊÚ,
-[squid:UselessImportCheck"-Remove this unused import 'java.util.Random'.(èøÉ›ùÿÿÿÿ8¦‰¦ÊÚ,
-Psquid:EmptyStatementUsageCheck"Remove this empty statement.(ˆ§İ¨şÿÿÿÿ8¦‰¦ÊÚ,
-Rsquid:S1153"1Directly append the argument of String.valueOf().(öÈÂ¿øÿÿÿÿ8¦‰¦ÊÚ,
-Msquid:S1153"1Directly append the argument of String.valueOf().(şµ„Ë8¦‰¦ÊÚ,
-Gsquid:S1068"+Remove this unused "toolbar" private field.(ş®º—8¦‰¦ÊÚ,
-Fsquid:S1068"+Remove this unused "context" private field.(êİç8¦‰¦ÊÚ,
-lsquid:S1301"KReplace this "switch" statement by "if" statements to increase readability.(ÿ¶°Øüÿÿÿÿ8¦‰¦ÊÚ,
-jsquid:S00101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(â–§Ô8¦‰¦ÊÚ,
-csquid:UselessImportCheck"5Remove this unused import 'android.app.ListActivity'.(ì¤²øÿÿÿÿ8¦‰¦ÊÚ,
-osquid:UselessImportCheck"FRemove this unused import 'android.support.v4.widget.ImageViewCompat'.(İŠÖ¯8¦‰¦ÊÚ,
-Z"squid:SwitchLastCaseIsDefaultCheck""Add a default case to this switch.(ÿ¶°Øüÿÿÿÿ8¦‰¦ÊÚ,
-U"squid:SwitchLastCaseIsDefaultCheck""Add a default case to this switch.(çãÑÓ8¦‰¦ÊÚ,
-gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Ò¶×Â8¦‰¦ÊÚ,
-Ksquid:S1905"/Remove this unnecessary cast to "RecyclerView".(å—óÆ8¦‰¦ÊÚ,
-dsquid:HiddenFieldCheck"8Rename "user" which hides the field declared at line 53.(ÂÔ›Ãüÿÿÿÿ8¦‰¦ÊÚ,
-Msquid:S1153"1Directly append the argument of String.valueOf().(ã©•è8¦‰¦ÊÚ,
-]squid:UselessImportCheck"4Remove this unused import 'android.widget.TableRow'.(†¶‹É8¦‰¦ÊÚ,

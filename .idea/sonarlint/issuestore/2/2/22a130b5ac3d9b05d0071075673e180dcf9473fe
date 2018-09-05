@@ -1,7 +1,0 @@
-
-…squid:S1319"pThe type of the "items" object should be an interface such as "List" rather than the implementation "ArrayList".(ßà¹–
-Tsquid:UselessImportCheck"3Remove this unused import 'io.reactivex.Scheduler'.(çší
-Ssquid:S1155">Use isEmpty() to check whether the collection is empty or not.(ÏÍ¯¾
-Bsquid:S1125"(Remove the literal "true" boolean value.(Ù¥ëªùÿÿÿÿ
-Xsquid:S1155">Use isEmpty() to check whether the collection is empty or not.(ı’ÂÌÿÿÿÿÿ
-Ysquid:S2589"8Remove this expression which always evaluates to "false"(ı’ÂÌÿÿÿÿÿ8‡ëâÆÚ,

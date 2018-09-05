@@ -2,28 +2,31 @@
 <TableRow xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="300dp"
-    android:layout_margin="6dp">
+    android:layout_height="400dp"
+    android:layout_margin="6dp"
+    android:weightSum="2">
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <RelativeLayout
+        android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:weightSum="2">
-
+        android:layout_weight="1">
         <ImageView
             android:id="@+id/leftSideImage"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
             android:layout_marginRight="3dp"
-            tools:src="@drawable/blue_drawable"/>
+            android:scaleType="centerCrop"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
         <ImageView
             android:id="@+id/rightSideImage"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
             android:layout_marginLeft="3dp"
-            tools:src="@drawable/blue_drawable"/>
-    </LinearLayout>
+            android:scaleType="centerCrop"/>
+    </RelativeLayout>
 
 </TableRow>

@@ -1,7 +1,0 @@
-
-…squid:S1319"pThe type of the "users" object should be an interface such as "List" rather than the implementation "ArrayList".(β¶¦
-squid:S1319"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(Λª“†ύÿÿÿÿ
-…squid:S1319"pThe type of the "users" object should be an interface such as "List" rather than the implementation "ArrayList".(αÿƒΗ
-squid:S1319"pThe type of the "items" object should be an interface such as "List" rather than the implementation "ArrayList".(Έ¥± ωÿÿÿÿ
-…squid:S1319"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(Θα€Θ
-squid:S1319"pThe type of the "items" object should be an interface such as "List" rather than the implementation "ArrayList".(Ψ­ωϋÿÿÿÿ

@@ -68,6 +68,7 @@ public class listActivity extends AppCompatActivity implements ViewInterface {
         setContentView(R.layout.activity_list);
 
         recyclerView = (RecyclerView) findViewById(R.id.rec_list_activity);
+        progressBar = findViewById(R.id.pgb_list_activity);
         layoutInflater = getLayoutInflater();
 
         linearLayoutManager = new LinearLayoutManager(this);
@@ -81,16 +82,13 @@ public class listActivity extends AppCompatActivity implements ViewInterface {
         recyclerView.addOnScrollListener(new PaginationScrollListener(linearLayoutManager) {
             @Override
             protected void loadMoreItems() {
-                isLoading = true;
-                offsetPage += 10;
+                if(!isLoading) {
+                    isLoading = true;
+                    offsetPage += 10;
 
-                loadNextPage();
+                    loadNextPage();
+                }
             }
-
-//            @Override
-//            public int getTotalPageCount() {
-//                return TOTAL_PAGES;
-//            }
 
             @Override
             public boolean isLastPage() {
@@ -118,8 +116,6 @@ public class listActivity extends AppCompatActivity implements ViewInterface {
         recyclerView.addItemDecoration(
                 itemDecoration
         );
-
-        progressBar = findViewById(R.id.pgb_list_activity);
     }
 
     @Override
@@ -148,28 +144,39 @@ public class listActivity extends AppCompatActivity implements ViewInterface {
     }
 
     @Override
-    public void setUpAdapterAndView(List<UserListItem> listOfData, boolean hasMore) {
+    public void setUpAdapterAndView(final List<UserListItem> listOfData, final boolean hasMore) {
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
                 progressBar.hide();
                 recyclerView.setVisibility(View.VISIBLE);
+
+                addDataToRV(listOfData, hasMore);
             }
         });
 
-        addDataToRV(listOfData, hasMore);
+//        addDataToRV(listOfData, hasMore);
     }
 
     @Override
-    public void addNextDataSet(List<UserListItem> listOfData, boolean hasMore) {
-        adapter.removeLoadingFooter();
-        isLoading = false;
+    public void addNextDataSet(final List<UserListItem> listOfData, final boolean hasMore) {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                removeLoaderAddDataToRV(listOfData, hasMore);
+            }
+        });
+    }
 
+    private void removeLoaderAddDataToRV(List<UserListItem> listOfData, boolean hasMore){
+        this.adapter.removeLoadingFooter();
+        isLoading = false;
         addDataToRV(listOfData, hasMore);
     }
 
     private void addDataToRV(List<UserListItem> listOfData, boolean hasMore){
-        this.listOfData.addAll(listOfData);
+        //this.listOfData.addAll(listOfData);
+        this.adapter.addAll(listOfData);
         this.adapter.notifyDataSetChanged();
 
         if(hasMore)
@@ -231,7 +238,7 @@ public class listActivity extends AppCompatActivity implements ViewInterface {
         }
 
         private final void initItemData(final CustomViewHolder customHolder,final UserListItem userItem){
-            Log.e("TAG", "user name : " + userItem.getName() + " items size: " + String.valueOf(userItem.getItems().size()));
+            //Log.e("TAG", "user name : " + userItem.getName() + " items size: " + String.valueOf(userItem.getItems().size()));
 
             Glide.with(listActivity.this)
                     .load(userItem.getImage())
@@ -239,10 +246,10 @@ public class listActivity extends AppCompatActivity implements ViewInterface {
                     .into(customHolder.userAvatar);
 
             int count = 0;
-            customHolder.userName.setText(userItem.getName());
+            //customHolder.userName.setText(userItem.getName());
             customHolder.tableLayout.removeAllViews();
             if(!userItem.isEven()){
-                Log.e("TAG", "user odd image : " + userItem.getItems().get(0));
+                //Log.e("TAG", "user odd image : " + userItem.getItems().get(0));
                 customHolder.tableLayout.addView(getTableRowOdd(userItem.getItems().get(count)), getTableLayoutParam());
                 count = 1;
             }
@@ -261,10 +268,13 @@ public class listActivity extends AppCompatActivity implements ViewInterface {
 
             Glide.with(listActivity.this)
                     .load(itemImage)
-                    .apply(new RequestOptions().override(1200, 1000).centerCrop())
+                    .apply(new RequestOptions()
+                            .override(1200, 1000)
+                            //.placeholder(R.drawable.placeholder)
+                            .centerCrop())
                     .into(itemView);
 
-            Log.e("Item Image: ", "image path : " + String.valueOf(itemImage));
+            //Log.e("Item Image: ", "image path : " + String.valueOf(itemImage));
 
             return oddItemView;
         }
@@ -278,16 +288,22 @@ public class listActivity extends AppCompatActivity implements ViewInterface {
 
             Glide.with(listActivity.this)
                     .load(leftImage)
-                    .apply(new RequestOptions().override(400, 400).centerInside())
+                    .apply(new RequestOptions()
+                            .override(400, 400)
+                            //.placeholder(R.drawable.placeholder)
+                            )
                     .into(leftItemView);
 
             Glide.with(listActivity.this)
                     .load(rightImage)
-                    .apply(new RequestOptions().override(400, 400).centerInside())
+                    .apply(new RequestOptions()
+                            .override(400, 400)
+                            //.placeholder(R.drawable.placeholder)
+                            )
                     .into(rightItemView);
 
-            Log.e("Item Image: ", "image path left : " + String.valueOf(leftImage));
-            Log.e("Item Image: ", "image path right : " + String.valueOf(rightImage));
+            //Log.e("Item Image: ", "image path left : " + String.valueOf(leftImage));
+            //Log.e("Item Image: ", "image path right : " + String.valueOf(rightImage));
 
             return evenItemView;
         }
