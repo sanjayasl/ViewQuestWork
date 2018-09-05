@@ -11,7 +11,14 @@ import javax.inject.Inject;
 import dagger.android.AndroidInjector;
 import dagger.android.DispatchingAndroidInjector;
 import dagger.android.HasActivityInjector;
-
+/**
+ * The ViewQuest created for demonstration purpose
+ * don't copy/edit this code without author acknowledgement.
+ *
+ * @author  Sanjaya Ratnayake
+ * @version 1.0
+ * @since   2018-09-06
+ */
 public class HerokuApplication extends Application implements HasActivityInjector {
 
     @Inject

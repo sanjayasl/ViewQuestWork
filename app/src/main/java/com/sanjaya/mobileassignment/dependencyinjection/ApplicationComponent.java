@@ -7,7 +7,14 @@ import javax.inject.Singleton;
 import dagger.BindsInstance;
 import dagger.Component;
 import dagger.android.support.AndroidSupportInjectionModule;
-
+/**
+ * The ViewQuest created for demonstration purpose
+ * don't copy/edit this code without author acknowledgement.
+ *
+ * @author  Sanjaya Ratnayake
+ * @version 1.0
+ * @since   2018-09-06
+ */
 @Singleton
 @Component(modules = {
         AndroidSupportInjectionModule.class,

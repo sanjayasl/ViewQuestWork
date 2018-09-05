@@ -11,10 +11,10 @@
     <string name="HEROKU_API_HOST">http://sd2-hiring.herokuapp.com/api/</string>
 
     <!-- errors -->
-    <string name="error_empty_dataset">No Repos listed for:</string>
+    <string name="error_empty_dataset">No User listed for:</string>
     <string name="error_not_found">Resource not found.</string>
 
-    <string name="error_msg">Sorry! Couldn\'t fetch movies.</string>
+    <string name="error_msg">Sorry! Couldn\'t fetch Users.</string>
     <string name="error_msg_no_internet">Not connected to internet</string>
     <string name="error_msg_timeout">The server took too long to respond</string>
     <string name="error_msg_unknown">An unexpected error occurred</string>

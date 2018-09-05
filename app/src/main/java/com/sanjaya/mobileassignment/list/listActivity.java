@@ -2,6 +2,8 @@ package com.sanjaya.mobileassignment.list;
 
 import android.app.ListActivity;
 import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.widget.ContentLoadingProgressBar;
@@ -38,7 +40,14 @@ import java.util.Random;
 import javax.inject.Inject;
 
 import dagger.android.AndroidInjection;
-
+/**
+ * The ViewQuest created for demonstration purpose
+ * don't copy/edit this code without author acknowledgement.
+ *
+ * @author  Sanjaya Ratnayake
+ * @version 1.0
+ * @since   2018-09-06
+ */
 public class listActivity extends AppCompatActivity implements ViewInterface {
 
     static final int VIEW_LIMIT = 10;
@@ -49,8 +58,6 @@ public class listActivity extends AppCompatActivity implements ViewInterface {
     private LayoutInflater layoutInflater;
     private RecyclerView recyclerView;
     private CustomAdapter adapter;
-    private Toolbar toolbar;
-    private String user;
     private ContentLoadingProgressBar progressBar;
 
     private boolean isLoading = false;
@@ -139,8 +146,20 @@ public class listActivity extends AppCompatActivity implements ViewInterface {
     protected void onStart() {
         super.onStart();
 
-        if(!listPresenter.isStart())
+        if(!listPresenter.isStart() && isNetworkAvailable())
             listPresenter.start(offsetPage, VIEW_LIMIT);
+        else
+            Toast.makeText(this, "Internet Connection Is Required", Toast.LENGTH_LONG).show();
+    }
+
+    public boolean isNetworkAvailable() {
+        ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        if (activeNetworkInfo != null && activeNetworkInfo.isConnected()) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     @Override

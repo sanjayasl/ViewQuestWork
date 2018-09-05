@@ -2,7 +2,14 @@ package com.sanjaya.mobileassignment.list;
 
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-
+/**
+ * The ViewQuest created for demonstration purpose
+ * don't copy/edit this code without author acknowledgement.
+ *
+ * @author  Sanjaya Ratnayake
+ * @version 1.0
+ * @since   2018-09-06
+ */
 public abstract class PaginationScrollListener extends RecyclerView.OnScrollListener {
 
     LinearLayoutManager layoutManager;

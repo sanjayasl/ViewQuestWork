@@ -12,7 +12,14 @@ import javax.inject.Inject;
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.functions.Function;
 import io.reactivex.subscribers.DisposableSubscriber;
-
+/**
+ * The ViewQuest created for demonstration purpose
+ * don't copy/edit this code without author acknowledgement.
+ *
+ * @author  Sanjaya Ratnayake
+ * @version 1.0
+ * @since   2018-09-06
+ */
 public class ListPresenter implements LifecycleObserver {
 
     private boolean isStart = false;

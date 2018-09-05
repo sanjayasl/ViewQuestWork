@@ -25,7 +25,14 @@ import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
-
+/**
+ * The ViewQuest created for demonstration purpose
+ * don't copy/edit this code without author acknowledgement.
+ *
+ * @author  Sanjaya Ratnayake
+ * @version 1.0
+ * @since   2018-09-06
+ */
 @Module(subcomponents = {UserListSubcomponent.class})
 public class ApplicationModule {
 
@@ -56,8 +63,8 @@ public class ApplicationModule {
                 new OkHttpClient.Builder()
                         .addInterceptor(
                                 new ErrorInterceptor())
-                        .addNetworkInterceptor(
-                                new StethoInterceptor())
+                        //.addNetworkInterceptor(
+                        //        new StethoInterceptor())
                         .connectTimeout(10, TimeUnit.SECONDS)
                         .writeTimeout(10, TimeUnit.SECONDS)
                         .readTimeout(20, TimeUnit.SECONDS)

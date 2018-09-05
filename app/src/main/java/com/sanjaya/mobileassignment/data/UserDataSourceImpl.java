@@ -19,6 +19,14 @@ import io.reactivex.Scheduler;
 import io.reactivex.functions.Function;
 import io.reactivex.schedulers.Schedulers;
 
+/**
+ * The ViewQuest created for demonstration purpose
+ * don't copy/edit this code without author acknowledgement.
+ *
+ * @author  Sanjaya Ratnayake
+ * @version 1.0
+ * @since   2018-09-06
+ */
 public class UserDataSourceImpl  implements UserDataSourceInterface {
 
     private HerokuRestAdapter restAdapter;
@@ -35,7 +43,7 @@ public class UserDataSourceImpl  implements UserDataSourceInterface {
                 .flatMap(new Function<UserDataModel, Publisher<ListViewModel>>() {
                     @Override
                     public Publisher<ListViewModel> apply(UserDataModel userDataModel) throws Exception {
-                        Log.e("TAG", userDataModel.toString());
+                        //Log.e("TAG", userDataModel.toString());
                         List<UserListItem> listItems = new ArrayList<>();
                         if(userDataModel == null || userDataModel.getData() == null || userDataModel.getData().getUsers().size() == 0){
                             throw new EmptyDatasetException();
